@@ -86,18 +86,15 @@ npm install -g gitlab-ci-local
 brew install gitlab-ci-local
 ```
 
-### Windows (Git bash)
+### Windows (WSL2 / Ubuntu)
 
-- Install [gitbash](https://git-scm.com/downloads)
-- Install [rsync](https://prasaz.medium.com/add-rsync-to-windows-git-bash-f42736bae1b3)
+Install WSL, and set version to 2, by following [the official guide on microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-Download and put binary in `C:\Program Files\Git\mingw64\bin`
+Once WSL is installed, and you have Ubuntu up and running, proceed by installing docker. It is recommended _not_ using Docker Desktop - and it should be uninstalled completely for the remainder of this guide to work.
 
-```bash
-curl -L https://github.com/firecow/gitlab-ci-local/releases/latest/download/win.gz | gunzip -c > /c/Program\ Files/Git/mingw64/bin/gitlab-ci-local.exe
-```
+Both of the above criteria are described step-by-step in [this guide in docker docs](https://docs.docker.com/engine/install/ubuntu/).
 
-Executing `gitlab-ci-local` with `--variable MSYS_NO_PATHCONV=1` can be useful in certain situations
+If you have both WSL and docker set up properly at this point, using gitlab-ci-local should be as easy, as following the guide for a Linux setup (within WSL).
 
 ## Convenience
 
